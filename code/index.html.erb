@@ -1,0 +1,279 @@
+<head>
+	<title>Resume</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="assets/jquery.min.js"></script>
+	<script src="assets/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="assets/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+	<div class="margin-top"></div>
+
+	<div class="head">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-4 center-top">
+				<div>
+					<h1 class="">Sourav Goswami</h1>
+					<h5>Ruby on Rails Developer</h5>
+				</div>
+			</div>
+
+			<div class="col-md-1"></div>
+
+			<div class="col-md-6 center-top">
+				<div class="info">
+					<div class="email">
+						<img src="assets/mail.svg" class="icon24">
+						<strong>Email:</strong> <a href="mailto:souravgoswami@protonmail.com">souravgoswami@protonmail.com</a>
+						<div class="padding"><a href="mailto:sg97@protonmail.com">sg97@protonmail.com</a></div>
+					</div>
+
+					<div class="phone pt-2">
+						<img src="assets/phone-call.svg" class="icon24">
+						<strong>Phone:</strong> <a href="tel:+918335830664">(+91) 8335-830664</a>
+					</div>
+
+					<div class="address pt-2">
+						<img src="assets/house.svg" class="icon24">
+						<strong>Address:</strong> <a href="https://goo.gl/maps/NwppMZSm8ECp5k32A">13 Nandan Nagar, Belgharia, Kolkata 700083</a>
+
+					</div>
+
+					<div class="linkedin pt-2">
+						<img src="assets/linkedin.svg" class="icon24">
+						<strong>LinkedIn: <a href="https://www.linkedin.com/in/sourav-goswami0/">https://www.linkedin.com/in/sourav-goswami0/</a></strong>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container p-4">
+		<h3>Resume Objective</h3>
+		<hr>
+
+		<ul>
+			<% %Q`
+				Experience in facilitating cutting-edge engineering solutions with a wide range of e-commerce application and technology skills.
+				Proven ability to leverage full-stack knowledge using Ruby on Rails.
+				Experience in designing beautiful, interactive, user-friendly, and responsive websites.
+				Writes clean codes keeping performance in mind.
+				Expertise in Unix and GNU/Linux system administration.
+				Expertise in TDD and BDD.
+				Experience in testing websites with Capybara + Selenium bot.
+				Experience in writing colourful and interactive command line tools for GNU/Linux.
+				Experience in automating daily tasks (web, GUI, TUI) with Ruby.
+				Experience in creating software packages for linux (Debian and Arch Linux).
+			`.strip.each_line do |x| %>
+				<li><%= x %></li>
+			<% end %>
+		</ul>
+
+		<h3>Skills</h3>
+		<hr>
+
+		<div class="row p-3">
+			<div class="col-md-6">
+				<h5>Programming Languages</h5>
+
+				<% {
+					Ruby: 95,
+					Crystal: 75,
+					JavaScript: 70,
+					Python: 50,
+					C: 40,
+				}.each do |x, y| %>
+					<div class="progress m-2">
+						<div class="progress-bar progress-bar-striped bg-<%= y <= 20 ? 'danger' : y <= 40 ? 'warning' : y <= 60 ? 'primary' : 'success' %>"
+							role="progressbar",
+							aria-valuenow="<%= y %>",
+							aria-valuemax="100",
+							aria-valuemin="0"
+							style="font-weight: bold ; width: <%= y %>% ; color: #fff ;"
+						><%= x %></div>
+					</div>
+				<% end %>
+			</div>
+
+			<div class="col-md-6">
+				<h5>Web Frameworks</h5>
+
+				<% {
+					'Ruby on Rails': 90,
+					Jekyll: 80,
+				}.each do |x, y| %>
+					<div class="progress m-2">
+						<div class="progress-bar progress-bar-striped bg-<%= y <= 20 ? 'danger' : y <= 40 ? 'warning' : y <= 60 ? 'primary' : 'success' %>"
+							role="progressbar",
+							aria-valuenow="<%= y %>",
+							aria-valuemax="100",
+							aria-valuemin="0"
+							style="font-weight: bold ; width: <%= y %>% ; color: #fff ;"
+						><%= x %></div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+
+		<div class="row p-3">
+			<div class="col-md-6">
+				<h5>Operating Systems</h5>
+				<% {
+					'GNU/Linux': 90,
+					'Unix (BSD)': 65,
+					Windows: 45,
+				}.each do |x, y| %>
+					<div class="progress m-2">
+						<div class="progress-bar progress-bar-striped bg-<%= y <= 20 ? 'danger' : y <= 40 ? 'warning' : y <= 60 ? 'primary' : 'success' %>"
+							role="progressbar",
+							aria-valuenow="<%= y %>",
+							aria-valuemax="100",
+							aria-valuemin="0"
+							style="font-weight: bold ; width: <%= y %>% ; color: #fff ;"
+						><%= x %></div>
+					</div>
+				<% end %>
+			</div>
+
+			<div class="col-md-6">
+				<h5>Software</h5>
+				<% {
+					GIMP: 90,
+					LibreOffice: 85,
+					Inkscape: 75,
+					Blender: 55,
+				}.each do |x, y| %>
+					<div class="progress m-2">
+						<div class="progress-bar progress-bar-striped
+							bg-<%= y <= 20 ? 'danger' : y <= 40 ? 'warning' : y <= 60 ? 'primary' : 'success' %>
+						"
+							role="progressbar",
+							aria-valuenow="<%= y %>",
+							aria-valuemax="100",
+							aria-valuemin="0"
+							style="font-weight: bold ; width: <%= y %>% ; color: #fff ;"
+						><%= x %></div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+
+		<br>
+		<br>
+		<div class="row">
+			<ul>
+				<%{
+					'Ruby on Rails' => 'f50 rails',
+					'Ruby Programming' => 'f55 ruby',
+					'Jekyll' => 'f58 jekyll',
+					'GTK3' => '3aa gtk',
+					'HTML5' => 'ee7934 html5',
+					'CSS3' => '25a1e1 css3',
+					'JavaScript' => 'EFD81D js',
+					'BASH / Shells' => '2A3137 shell',
+					'GNU/Linux' => 'FEB70A linux',
+					'BSD' => 'CE1009 bsd',
+					'Crystal Programming' => '666 crystal',
+					'Inkscape' => '000 inkscape',
+					'GIMP' => '808777 gimp',
+					'Blender' => 'f76D0E blender'
+				}.each do |x, y| %>
+					<div class="tag inline" style="background-color: #<%= y.split(?\s)[0].to_s.scan(/[0-9a-f]/i).join.then { |c| c.length == 3 ? c + 'f' : c + 'ff' } %>">
+						<li class="skill-badge"><img src="assets/<%= y.split(?\s)[1].to_s %>.png" class="icon16"><span class="skill-badge-label"><%= x %></span></li>
+					</div>
+				<% end %>
+			</ul>
+		</div>
+
+		<br><br>
+
+		<h3>Projects</h3>
+		<hr>
+
+		<div class="github">
+			<h5>Github</h5>
+			<a href="https://github.com/Souravgoswami">Github - Sourav Goswami</a>
+		</div>
+
+		<br>
+
+		<div class="cowspeak">
+			<h5>I worked on some colourful TUI projects</h5>
+			<a href="https://github.com/Souravgoswami/cowspeak">Cowspeak</a>
+			<br>
+			<a href="https://github.com/Souravgoswami/term-clock">Term Clock</a>
+		</div>
+
+		<br>
+
+		<div class="theme">
+			<h5>Theme I Created for Linux</h5>
+			<p><a href="https://www.gnome-look.org/p/1276216/">XFCE Colour</a><p>
+		</div>
+
+		<div class="cursor">
+			<h5>I have worked on a cursor set using Inkscape + Ruby</h5>
+			<p><a href="https://www.gnome-look.org/p/1360254/">Oreo Cursors</a><p>
+		<div>
+
+		<div class="games">
+			<h5>I made some games in the past using the Ruby2D library</h5>
+			<a href="http://www.ruby2d.com/showcase/">Showcase</a>
+			<br>
+			<p><a href="https://youtu.be/8s--ZyTmFxU?t=3644">RubyConf 2018 - Lightning Talks</a></p>
+		</div>
+
+		<div class="aur">
+			<h5>I also have my own package to Arch User Repository (AUR)</h5>
+			<a href="https://aur.archlinux.org/packages/cowspeak/">cowspeak</a>
+		</div>
+
+		<br>
+
+		<br>
+		<h3>Achievements</h3>
+		<hr>
+		<div class="row">
+			<div class="col-md-12">
+				<h5>Online Courses/Certificates:</h5>
+
+				Udemy
+				<br>
+				<a href="https://www.udemy.com/certificate/UC-5ac2064d-fbcd-4eaf-a559-09bb9e09e615/">The Complete Ruby on Rails Developer Course</a>
+				<br>
+
+				<a href="https://www.udemy.com/certificate/UC-89fc19ee-a341-4daa-87ac-ea1957f3fa44/">Dissecting Ruby on Rails 5 - Become a Professional Developer</a>
+				<br>
+
+				<a href="https://www.udemy.com/certificate/UC-f34fab7e-4f4c-47dc-98d7-8fd5f37b8ab2/">Professional Rails Code Along</a>
+				<br>
+
+				<a href="https://www.udemy.com/certificate/UC-N7TBJZKM/">Learn to Code with Ruby</a>
+				<br>
+
+				<a href="https://www.udemy.com/certificate/UC-65bf39c3-60fb-4b3b-83d5-0233696bcb3a/">Creative CSS Animations, Transitions And Transforms Course</a>
+				<br>
+
+				<a href="https://www.udemy.com/certificate/UC-DB4O72RN/">The Complete Python Developer Course</a>
+				<br>
+
+				<a href="https://www.udemy.com/certificate/UC-IS68CREH/">BASH Programming Course: Master the Linux Command Line!</a>
+				<br>
+				<br>
+
+				Sololearn
+				<br>
+				<a href="https://www.sololearn.com/Certificate/1081-7270906/pdf/">Ruby Tutorial</a>
+				<br>
+
+				<a href="https://www.sololearn.com/Certificate/1060-7270906/pdf/">SQL Fundamentals</a>
+				<br>
+			</div>
+		</div>
+
+		<hr>
+	</div>
+</body>
