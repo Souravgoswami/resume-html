@@ -1,4 +1,13 @@
+@font-face {
+	font-family: 'PT Serif';
+	font-style: normal;
+	font-weight: 400;
+	src: local('PT Serif'), local('PTSerif-Regular'), url('assets/PTSerif.woff2') format('woff2');
+}
+
+
 body {
+	font-family: 'PT Serif', serif ;
 	margin: 0 ;
 }
 
@@ -36,7 +45,7 @@ a:hover {
 }
 
 .padding {
-	margin-left: 92px ;
+	margin-left: 96px ;
 }
 
 .tag {
