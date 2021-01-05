@@ -9,6 +9,8 @@
 body {
 	font-family: 'PT Serif', serif ;
 	margin: 0 ;
+	color: #333 !important ;
+	background-color: #fafafa ;
 }
 
 .margin-top {
@@ -27,7 +29,7 @@ a:hover {
 }
 
 .head {
-	background-color: #f5f5f5 ;
+	background-color: #efefef ;
 	width: 100% ;
 	height: 100% ;
 	text-align: left ;
@@ -102,4 +104,8 @@ a:hover {
 
 .progress {
 	filter: drop-shadow(3px 3px 2px #0003) ;
+}
+
+.gradient {
+	color: #222 !important ;
 }

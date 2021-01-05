@@ -1,0 +1,83 @@
+<div class="row p-3">
+	<div class="col-md-6">
+		<h5>Programming Languages</h5>
+
+		<% {
+			Ruby: 95,
+			Crystal: 75,
+			JavaScript: 75,
+			C: 60,
+			Python: 40,
+		}.each do |x, y| %>
+			<div class="progress m-2">
+				<div class="progress-bar progress-bar-striped bg-<%= y <= 20 ? 'danger' : y <= 40 ? 'warning' : y <= 60 ? 'primary' : 'success' %>"
+					role="progressbar"
+					aria-valuenow="<%= y %>"
+					aria-valuemax="100"
+					aria-valuemin="0"
+					style="font-weight: bold ; width: <%= y %>% ; color: #fff ;"
+				><%= x %></div>
+			</div>
+		<% end %>
+	</div>
+
+	<div class="col-md-6">
+		<h5>Web Frameworks</h5>
+
+		<% {
+			'Ruby on Rails': 90,
+			Jekyll: 90,
+		}.each do |x, y| %>
+			<div class="progress m-2">
+				<div class="progress-bar progress-bar-striped bg-<%= y <= 20 ? 'danger' : y <= 40 ? 'warning' : y <= 60 ? 'primary' : 'success' %>"
+					role="progressbar"
+					aria-valuenow="<%= y %>"
+					aria-valuemax="100"
+					aria-valuemin="0"
+					style="font-weight: bold ; width: <%= y %>% ; color: #fff ;"
+				><%= x %></div>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+<div class="row p-3">
+	<div class="col-md-6">
+		<h5>Operating Systems</h5>
+		<% {
+			'GNU/Linux': 90,
+			'Unix (BSD)': 65,
+			Windows: 45,
+		}.each do |x, y| %>
+			<div class="progress m-2">
+				<div class="progress-bar progress-bar-striped bg-<%= y <= 20 ? 'danger' : y <= 40 ? 'warning' : y <= 60 ? 'primary' : 'success' %>"
+					role="progressbar"
+					aria-valuenow="<%= y %>"
+					aria-valuemax="100"
+					aria-valuemin="0"
+					style="font-weight: bold ; width: <%= y %>% ; color: #fff ;"
+				><%= x %></div>
+			</div>
+		<% end %>
+	</div>
+
+	<div class="col-md-6">
+		<h5>Designing Software</h5>
+		<% {
+			GIMP: 90,
+			Inkscape: 75,
+			Blender: 50,
+		}.each do |x, y| %>
+			<div class="progress m-2">
+				<div
+					class="progress-bar progress-bar-striped bg-<%= y <= 20 ? 'danger' : y <= 40 ? 'warning' : y <= 60 ? 'primary' : 'success' %>"
+					role="progressbar"
+					aria-valuenow="<%= y %>"
+					aria-valuemax="100"
+					aria-valuemin="0"
+					style="font-weight: bold ; width: <%= y %>% ; color: #fff ;"
+				><%= x %></div>
+			</div>
+		<% end %>
+	</div>
+</div>
