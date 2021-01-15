@@ -109,3 +109,42 @@ a:hover {
 .gradient {
 	color: #222 !important ;
 }
+
+.joined-list {
+	position: relative ;
+	margin: 0 ;
+	padding-bottom: 1em ;
+	padding-left: 20px ;
+}
+
+.joined-list::before {
+	content: '' ;
+	width: 2px ;
+	background: linear-gradient(#f55, #55f) ;
+	z-index: -1 ;
+	position: absolute ;
+	top: 12px ;
+	bottom: -12px ;
+	/* bullet size: 4 px, left: 12px, so 12 - 4 = 8px + this line width / 2 = 9px   */
+	left: -9px ;
+}
+
+.joined-list {
+	list-style: none ;
+}
+
+.joined-list::after {
+	content: '' ;
+	background-color: #000 ;
+	position: absolute ;
+	top: 12px ;
+	left: -12px ;
+	height: 8px ;
+	width: 8px ;
+	border: 4px solid #000 ;
+	border-radius: 50% ;
+}
+
+.joined-list:nth-child(3)::before {
+	width: 0px !important ;
+}

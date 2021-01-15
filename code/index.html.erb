@@ -25,7 +25,7 @@
 			<div class="col-md-1"></div>
 
 			<div class="col-md-6 center-top">
-				<%= IO.read(File.join(__dir__, %w(partials info.html))) %>
+				<%= IO.read(File.join(__dir__, %w(partials info.html.erb))) %>
 			</div>
 		</div>
 	</div>
@@ -33,13 +33,13 @@
 	<div class="container p-4">
 		<h3>Resume Objective</h3>
 		<hr>
-		<%= IO.read(File.join(__dir__, %w(partials objectives.html))) %>
+		<%= IO.read(File.join(__dir__, %w(partials objectives.html.erb))) %>
 		<br>
 		<br>
 
 		<h3>Certificates and Achievements</h3>
 		<hr>
-		<%= IO.read(File.join(__dir__, %w(partials achievements.html))) %>
+		<%= IO.read(File.join(__dir__, %w(partials achievements.html.erb))) %>
 
 		<h3>Skills</h3>
 		<hr>
@@ -160,8 +160,12 @@
 		</div>
 		<br><br>
 
+		<h3>Education</h3>
+		<hr>
+		<%= IO.read(File.join(__dir__, 'partials', 'education.html.erb')) %>
+
 		<h3>Projects</h3>
 		<hr>
-		<%= IO.read(File.join(__dir__, 'partials', 'projects.html')) %>
+		<%= IO.read(File.join(__dir__, 'partials', 'projects.html.erb')) %>
 	</div>
 </body>
